@@ -147,72 +147,72 @@ setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
 // является: ребенком (0–2), подростком (12–18), взрослым 
 // (18_60) или пенсионером (60– ...).
 
-// let age = +( prompt ("Введите возраст") as string)
+let age = +( prompt ("Введите возраст") as string)
 
 
-// if (age >= 0  || age <= 2){
-// alert("ребенок")
-// }
-// else if (age >= 12  || age <= 18){
-//     alert("подростoк")
-// }
-// else if (age >= 18  || age <= 60){
-//     alert("взрослый")
-// }
-// else (age > 60){
-//     alert('Дед')
-// }
+if (age >= 0  || age <= 2){
+alert("ребенок")
+}
+else if (age >= 12  || age <= 18){
+    alert("подростoк")
+}
+else if (age >= 18  || age <= 60){
+    alert("взрослый")
+}
+else (age > 60){
+  alert('Дед')
+}
 
 
 
 // Запросить у пользователя число от 0 до 9 и вывести ему 
 // спецсимвол, который расположен на этой клавише (1–!, 
 // 2–@, 3–# и т. д).
-let num = +(prompt("Число")as string)
-switch(num){
-case 1 :
-  console.log("\!");
-break
 
-case 2 :
-  console.log("\@");
-break
+// let num = +(prompt("Число")as string)
+// switch(num){
+// case 1 :
+//   console.log("\!");
+// break
 
-case 3 :
-  console.log("\#");
-break
+// case 2 :
+//   console.log("\@");
+// break
 
-case 4 :
-  console.log("\$");
-break
+// case 3 :
+//   console.log("\#");
+// break
 
-case 5 :
-  console.log("\%");
-break
+// case 4 :
+//   console.log("\$");
+// break
 
-case 6 :
-  console.log("\^");
-break
+// case 5 :
+//   console.log("\%");
+// break
 
-case 7 :
-  console.log("\&");
-break
+// case 6 :
+//   console.log("\^");
+// break
 
-case 8 :
-  console.log("\*");
-break
+// case 7 :
+//   console.log("\&");
+// break
 
-case 9 :
-  console.log("\(");
-break
+// case 8 :
+//   console.log("\*");
+// break
 
-case 0 :
-  console.log("\)");
-break
+// case 9 :
+//   console.log("\(");
+// break
 
-default:
-  alert('От 0 до 9!')
-  break
+// case 0 :
+//   console.log("\)");
+// break
 
-}
-//fewfw
+// default:
+//   alert('От 0 до 9!')
+//   break
+
+// }
