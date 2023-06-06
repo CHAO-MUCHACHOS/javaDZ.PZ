@@ -218,6 +218,6 @@ setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
 // }
 
 
-
+alert(Math.random())
 
 
