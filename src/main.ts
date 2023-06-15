@@ -105,7 +105,7 @@ import './style.css'
 
 
 
-//?  какое-то ДЗ
+ //? какое-то ДЗ
 // let a = +(prompt("1")as string)
 // let b = +(prompt("2")as string)
 // let x = (a + b)
@@ -182,9 +182,36 @@ import './style.css'
 // case 0 :
 //   console.log("\)");
 // break
-// *TODO default:
+//  default:
 //   alert('От 0 до 9!')
 //   break
 
 // }
 
+//? Запросить у пользователя трехзначное и число и проверить, есть ли в нем одинаковые цифры.
+
+// let num = +(prompt("Число")as string)
+// let firstNum = num / 100
+// firstNum = (Math.round(firstNum))
+// let secNum = (num /10) % 10
+// secNum = (Math.round (secNum))
+// let thirdNum = num % 10
+
+// if( firstNum == secNum || firstNum == thirdNum || secNum == thirdNum ){
+//   alert ("есть совпадения")
+// }
+// else {
+//   alert ("нет совпадений")
+// }
+//? Запросить у пользователя год и проверить, високосный он
+//?или нет. Високосный год либо кратен 400, либо кратен 4 и
+//?при этом не кратен 100
+
+let num = +(prompt("год")as string)
+let yer = num % 400
+let yer2 = num % 4 
+let yer3 = num % 100
+if( yer == 10 && yer2 == 0 && yer3 != 0){
+  alert("высокосный")
+}
+else("не высокосный")
