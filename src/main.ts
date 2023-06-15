@@ -222,12 +222,12 @@ import './style.css'
 let num = +(prompt("5 значное число")as string)
 let num1 = num % 10
 let num2 = (num/10)%10
-let num3 = (num/100)%10
 let num4 = (num/1000)%10
 let num5 = (num/10000)%10
-console.log(num1)
-console.log(num2)
-console.log(num3)
-console.log(num4)
-console.log(num5)
+if(num1 == num5 && num2 == num4){
+  alert("полиндром")
+}
+else{
+  alert("не полиндром")
+}
 
