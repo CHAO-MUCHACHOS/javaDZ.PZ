@@ -1,32 +1,4 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
-
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
-
-
-
-
-
 
 // switch(Переменная)){
 //     case "HTTP": (с чем сравнивает)
@@ -169,52 +141,51 @@ setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
 // спецсимвол, который расположен на этой клавише (1–!, 
 // 2–@, 3–# и т. д).
 
-// let num = +(prompt("Число")as string)
-// switch(num){
-// case 1 :
-//   console.log("\!");
-// break
+let num = +(prompt("Число")as string)
+switch(num){
+case 1 :
+  console.log("\!");
+break
 
-// case 2 :
-//   console.log("\@");
-// break
+case 2 :
+  console.log("\@");
+break
 
-// case 3 :
-//   console.log("\#");
-// break
+case 3 :
+  console.log("\#");
+break
 
-// case 4 :
-//   console.log("\$");
-// break
+case 4 :
+  console.log("\$");
+break
 
-// case 5 :
-//   console.log("\%");
-// break
+case 5 :
+  console.log("\%");
+break
 
-// case 6 :
-//   console.log("\^");
-// break
+case 6 :
+  console.log("\^");
+break
 
-// case 7 :
-//   console.log("\&");
-// break
+case 7 :
+  console.log("\&");
+break
 
-// case 8 :
-//   console.log("\*");
-// break
+case 8 :
+  console.log("\*");
+break
 
-// case 9 :
-//   console.log("\(");
-// break
+case 9 :
+  console.log("\(");
+break
 
-// case 0 :
-//   console.log("\)");
-// break
+case 0 :
+  console.log("\)");
+break
 
-// default:
-//   alert('От 0 до 9!')
-//   break
+default:
+  alert('От 0 до 9!')
+  break
 
-// }
+}
 
-console.log("dsads");
