@@ -217,3 +217,4 @@ setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
 
 // }
 
+console.log("dsads");
