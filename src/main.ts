@@ -211,7 +211,9 @@ let num = +(prompt("год")as string)
 let yer = num % 400
 let yer2 = num % 4 
 let yer3 = num % 100
-if( yer == 10 && yer2 == 0 && yer3 != 0){
+if( yer == 10 || yer2 == 0 && yer3 != 0){
   alert("высокосный")
 }
-else(alert("не высокосный"))
+else{
+  alert("не высокосный")
+}
