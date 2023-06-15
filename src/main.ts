@@ -207,13 +207,14 @@ import './style.css'
 //?или нет. Високосный год либо кратен 400, либо кратен 4 и
 //?при этом не кратен 100
 
-let num = +(prompt("год")as string)
-let yer = num % 400
-let yer2 = num % 4 
-let yer3 = num % 100
-if( yer == 10 || yer2 == 0 && yer3 != 0){
-  alert("высокосный")
-}
-else{
-  alert("не высокосный")
-}
+// let num = +(prompt("год")as string)
+// let yer = num % 400
+// let yer2 = num % 4 
+// let yer3 = num % 100
+// if( yer == 10 || yer2 == 0 && yer3 != 0){
+//   alert("высокосный")
+// }
+// else{
+//   alert("не высокосный")
+// }
+
