@@ -1,21 +1,24 @@
 import './style.css'
 
-let DZ1 = document.querySelector('#test')
+let Dz1 = document.querySelector('#test')
 
-const alert1 = document.querySelector('#btn1')
-alert1?.addEventListener('click', n1 )
+const DZ1 = document.querySelector('#btn1')
+DZ1?.addEventListener('click', n1 )
 
-const alert2 = document.querySelector('#btn2')
-alert2?.addEventListener('click', n2 )
+const DZ2 = document.querySelector('#btn2')
+DZ2?.addEventListener('click', n2 )
 
-const alert3 = document.querySelector('#btn3')
-alert3?.addEventListener('click', n3 )
+const DZ3 = document.querySelector('#btn3')
+DZ3?.addEventListener('click', n3 )
 
-const alert4 = document.querySelector('#btn4')
-alert4?.addEventListener('click', n4 )
+const DZ4 = document.querySelector('#btn4')
+DZ4?.addEventListener('click', n4 )
 
-const alert5 = document.querySelector('#btn5')
-alert5?.addEventListener('click', n5 )
+const DZ5 = document.querySelector('#btn5')
+DZ5?.addEventListener('click', n5 )
+
+const DZ6 = document.querySelector('#btn6')
+DZ6?.addEventListener('click', n6 )
 
 const sad = document.querySelector('#inf')
 sad?.addEventListener('click', info)
@@ -292,4 +295,27 @@ else{
   alert ('нет')
   
 }
+}
+
+function n6 (){
+
+  let mone = +(prompt("кол-во USD")as string)
+
+let cur = prompt("в какую валюту? (EUR , UAN, AZN)")
+
+if ( cur == "EUR"){
+let UtoE = mone * 0.91
+alert(UtoE)
+}
+
+if ( cur == "UAN"){
+  let UtoU = mone * 36.94
+  alert(UtoU)
+  }
+
+  if ( cur == "AZN"){
+    let UtoA = mone * 1.70
+    alert(UtoA)
+    }
+
 }
