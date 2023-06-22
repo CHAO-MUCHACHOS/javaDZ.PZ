@@ -1,5 +1,31 @@
 import './style.css'
 
+let DZ1 = document.querySelector('#test')
+
+const alert1 = document.querySelector('#btn1')
+alert1?.addEventListener('click', n1 )
+
+const alert2 = document.querySelector('#btn2')
+alert2?.addEventListener('click', n2 )
+
+const alert3 = document.querySelector('#btn3')
+alert3?.addEventListener('click', n3 )
+
+const alert4 = document.querySelector('#btn4')
+alert4?.addEventListener('click', n4 )
+
+const alert5 = document.querySelector('#btn5')
+alert5?.addEventListener('click', n5 )
+
+const sad = document.querySelector('#inf')
+sad?.addEventListener('click', info)
+
+// DZ1.innerText = "полиндром"
+function info(){
+
+  alert("первые ДЗ и ПЗ потерялись xD")
+}
+
 // switch(Переменная)){
 //     case "HTTP": (с чем сравнивает)
 //     Переменная = "Hypertext transfer protocol"; (присваивает)
@@ -115,119 +141,155 @@ import './style.css'
 
 
 //?  DZ 2 #1
-//Запросить у пользователя его возраст и определить, кем он 
-// является: ребенком (0–2), подростком (12–18), взрослым 
-// (18_60) или пенсионером (60– ...).
+//?Запросить у пользователя его возраст и определить, кем он 
+//? является: ребенком (0–2), подростком (12–18), взрослым 
+//? (18_60) или пенсионером (60– ...).
 
-// let age = +( prompt ("Введите возраст") as string)
+function n1() {
 
+  let age = +( prompt ("Введите возраст") as string)
+  
+  
+  if (age >= 0  && age <= 2){
+       alert("ребенок")
+  }
+  else if (age >= 12  && age <= 18){
+      alert("подростoк")
+  }
+  else if (age >= 18  && age <= 60){
+      alert("взрослый")
+  }
+  else if (age > 60){
+    alert('Дед')
+  }
 
-// if (age >= 0  || age <= 2){
-// alert("ребенок")
-// }
-// else if (age >= 12  || age <= 18){
-//     alert("подростoк")
-// }
-// else if (age >= 18  || age <= 60){
-//     alert("взрослый")
-// }
-// else (age > 60){
-//   alert('Дед')
-// }
-
+}  
 
 
 //? Запросить у пользователя число от 0 до 9 и вывести ему 
 //? спецсимвол, который расположен на этой клавише (1–!, 
 //? 2–@, 3–# и т. д).
 
-// let num = +(prompt("Число")as string)
-// switch(num){
-// case 1 :
-//   console.log("\!");
-// break
+function n2() {
+  let num = +(prompt("Число")as string)
+switch(num){
+case 1 :
+  console.log("\!");
+break
 
-// case 2 :
-//   console.log("\@");
-// break
+case 2 :
+  console.log("\@");
+break
 
-// case 3 :
-//   console.log("\#");
-// break
+case 3 :
+  console.log("\#");
+break
 
-// case 4 :
-//   console.log("\$");
-// break
+case 4 :
+  console.log("\$");
+break
 
-// case 5 :
-//   console.log("\%");
-// break
+case 5 :
+  console.log("\%");
+break
 
-// case 6 :
-//   console.log("\^");
-// break
+case 6 :
+  console.log("\^");
+break
 
-// case 7 :
-//   console.log("\&");
-// break
+case 7 :
+  console.log("\&");
+break
 
-// case 8 :
-//   console.log("\*");
-// break
+case 8 :
+  console.log("\*");
+break
 
-// case 9 :
-//   console.log("\(");
-// break
+case 9 :
+  console.log("\(");
+break
 
-// case 0 :
-//   console.log("\)");
-// break
-//  default:
-//   alert('От 0 до 9!')
-//   break
+case 0 :
+  console.log("\)");
+break
+ default:
+  alert('От 0 до 9!')
+  break
 
-// }
+}
+
+}
+
 
 //? Запросить у пользователя трехзначное и число и проверить, есть ли в нем одинаковые цифры.
+function n3() {
 
-// let num = +(prompt("Число")as string)
-// let firstNum = num / 100
-// firstNum = (Math.round(firstNum))
-// let secNum = (num /10) % 10
-// secNum = (Math.round (secNum))
-// let thirdNum = num % 10
 
-// if( firstNum == secNum || firstNum == thirdNum || secNum == thirdNum ){
-//   alert ("есть совпадения")
-// }
-// else {
-//   alert ("нет совпадений")
-// }
+let num = +(prompt("Число")as string)
+let firstNum = num / 100
+firstNum = (Math.round(firstNum))
+let secNum = (num /10) % 10
+secNum = (Math.round (secNum))
+let thirdNum = num % 10
+
+if( firstNum == secNum || firstNum == thirdNum || secNum == thirdNum ){
+  alert ("есть совпадения")
+}
+else {
+  alert ("нет совпадений")
+}
+}
 //? Запросить у пользователя год и проверить, високосный он
 //?или нет. Високосный год либо кратен 400, либо кратен 4 и
 //?при этом не кратен 100
+function n4(){
+  let num = +(prompt("год")as string)
+  let yer = num % 400
+  let yer2 = num % 4 
+  let yer3 = num % 100
+  if( yer == 10 || yer2 == 0 && yer3 != 0){
+      alert("высокосный")
+    }
+    else{
+        alert("не высокосный")
+      }
+      
+    }
 
-// let num = +(prompt("год")as string)
-// let yer = num % 400
-// let yer2 = num % 4 
-// let yer3 = num % 100
-// if( yer == 10 || yer2 == 0 && yer3 != 0){
-//   alert("высокосный")
-// }
-// else{
-//   alert("не высокосный")
-// }
+
 
 //? Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
-let num = +(prompt("5 значное число")as string)
-let num1 = num % 10
-let num2 = (num/10)%10
-let num4 = (num/1000)%10
-let num5 = (num/10000)%10
-if(num1 == num5 && num2 == num4){
-  alert("полиндром")
+function n5 (){
+  let num = +(prompt("5 значное число")as string)
+
+let num1 = (num % 10)
+
+console.log(num1);
+
+let num2 = (num % 100) / 10
+
+num2 = Math.round(num2)
+
+console.log(num2);
+
+let num4 = (num % 10000) / 1000
+
+num4 = Math.round(num4)
+
+console.log(num4);
+
+let num5 = (num % 100000) / 10000
+
+num5 = Math.round(num5)
+
+console.log(num5);
+
+if (num1 == num5 && num2 == num4){
+  alert('полиндром')
+
 }
 else{
-  alert("не полиндром")
+  alert ('нет')
+  
 }
-
+}
