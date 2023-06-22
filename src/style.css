@@ -3,7 +3,7 @@ body{
 }
 
 button{
-margin: 30px;
+margin-bottom: 30px;
   width: 100px;
   height: 50px;
  color: white;
@@ -35,4 +35,27 @@ position: relative;
 a{
   color: white;
   text-decoration: none;
+}
+details {
+  margin: 30px;
+  width: 60px;
+  height: 30px;
+ color: white;
+  background-color: rgb(223, 154, 75);
+  border: 2px solid gray;
+  border-radius: 15px;
+  padding: 10px;
+  background: linear-gradient(#d2c751,#c27100);
+  transition: .5s;
+  margin: 10px;
+}
+details:hover {
+  transition: 0.5s;
+  transform: translateY(2px);
+  box-shadow: 1px 10px 15px #cead55;
+   background: linear-gradient(#c27100,#d2c751 );
+  
+}
+summary{
+  margin-bottom: 30px;
 }
