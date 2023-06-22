@@ -32,3 +32,7 @@ footer{
 position: relative;
  top: 950px;
 }
+a{
+  color: white;
+  text-decoration: none;
+}
