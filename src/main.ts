@@ -4,6 +4,8 @@ import './style.css'
 
 let Dz1 = document.querySelector('#test')
 
+let qwst = document.querySelector('#quest')
+
 const DZ1 = document.querySelector('#btn1')
 DZ1?.addEventListener('click', n1 )
 
@@ -21,6 +23,15 @@ DZ5?.addEventListener('click', n5 )
 
 const DZ6 = document.querySelector('#btn6')
 DZ6?.addEventListener('click', n6 )
+
+const DZ7 = document.querySelector('#btn7')
+DZ7?.addEventListener('click', n7 )
+
+const DZ8 = document.querySelector('#btn8')
+DZ8?.addEventListener('click', n8 )
+
+const DZ9 = document.querySelector('#btn9')
+DZ9?.addEventListener('click', n9 )
 
 const sad = document.querySelector('#inf')
 sad?.addEventListener('click', info)
@@ -319,5 +330,49 @@ if ( cur == "UAN"){
     let UtoA = mone * 1.70
     alert(UtoA)
     }
+
+}
+
+function n7(){
+  let mone = +(prompt("сумма покупки")as string)
+
+  let per3 = mone * 0.03
+  let per5 = mone * 0.05
+  let per7 = mone * 0.07
+
+
+if(mone >= 200 && mone < 300){
+mone -= per3
+alert(mone)
+}
+
+else if(mone >= 300 && mone <= 500 ){
+  mone -= per5
+  alert(mone)
+}
+
+else(mone > 500)
+{
+  mone -= per7
+  alert(mone)
+}
+}
+
+function n8(){
+  let D = +(prompt("длина окружности")as string)
+  let P = +(prompt("периметр кадрата")as string)
+  P /= 4
+if(D <= P){
+  alert("может")
+}
+else{
+  alert("не может")
+}
+
+}
+
+function n9(){
+let qwst = 12
+
 
 }
