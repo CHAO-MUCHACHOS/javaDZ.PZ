@@ -1,6 +1,8 @@
 import './style.css'
 
 
+// //@ts-ignore
+// document.getElementById("demo").innerHTML = 11;
 
 let Dz1 = document.querySelector('#test')
 
@@ -372,7 +374,6 @@ else{
 }
 
 function n9(){
-let qwst = 12
 
 
 }
