@@ -6,31 +6,31 @@ import './style.css'
 
 let Dz1 = document.querySelector('#dz-class1')
 
-let qwst = document.querySelector('#quest')
+
 
 const DZ1 = document.querySelector('#btn2.1')
-DZ1?.addEventListener('click', n1 )
+DZ1?.addEventListener('click', n1_1 )
 
 const DZ2 = document.querySelector('#btn2.2')
-DZ2?.addEventListener('click', n2 )
+DZ2?.addEventListener('click', n1_2 )
 
 const DZ3 = document.querySelector('#btn2.3')
-DZ3?.addEventListener('click', n3 )
+DZ3?.addEventListener('click', n1_3 )
 
 const DZ4 = document.querySelector('#btn2.4')
-DZ4?.addEventListener('click', n4 )
+DZ4?.addEventListener('click', n1_4 )
 
 const DZ5 = document.querySelector('#btn2.5')
-DZ5?.addEventListener('click', n5 )
+DZ5?.addEventListener('click', n1_5 )
 
 const DZ6 = document.querySelector('#btn2.6')
-DZ6?.addEventListener('click', n6 )
+DZ6?.addEventListener('click', n1_6 )
 
 const DZ7 = document.querySelector('#btn2.7')
-DZ7?.addEventListener('click', n7 )
+DZ7?.addEventListener('click', n1_7 )
 
 const DZ8 = document.querySelector('#btn2.8')
-DZ8?.addEventListener('click', n8 )
+DZ8?.addEventListener('click', n1_8 )
 
 const DZ2_1 = document.querySelector('#btn2.8')
 DZ2_1?.addEventListener('click', n2_1 )
@@ -164,7 +164,7 @@ function info(){
 //? является: ребенком (0–2), подростком (12–18), взрослым 
 //? (18_60) или пенсионером (60– ...).
 
-function n1() {
+function n1_1() {
 
   let age = +( prompt ("Введите возраст") as string)
   
@@ -189,7 +189,7 @@ function n1() {
 //? спецсимвол, который расположен на этой клавише (1–!, 
 //? 2–@, 3–# и т. д).
 
-function n2() {
+function n1_2() {
   let num = +(prompt("Число")as string)
 switch(num){
 case 1 :
@@ -241,7 +241,7 @@ break
 
 
 //? Запросить у пользователя трехзначное и число и проверить, есть ли в нем одинаковые цифры.
-function n3() {
+function n1_3() {
 
 
 let num = +(prompt("Число")as string)
@@ -261,7 +261,7 @@ else {
 //? Запросить у пользователя год и проверить, високосный он
 //?или нет. Високосный год либо кратен 400, либо кратен 4 и
 //?при этом не кратен 100
-function n4(){
+function n1_4(){
   let num = +(prompt("год")as string)
   let yer = num % 400
   let yer2 = num % 4 
@@ -278,7 +278,7 @@ function n4(){
 
 
 //? Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
-function n5 (){
+function n1_5 (){
   let num = +(prompt("5 значное число")as string)
 
 let num1 = (num % 10)
@@ -313,7 +313,7 @@ else{
 }
 }
 
-function n6 (){
+function n1_6 (){
 
   let mone = +(prompt("кол-во USD")as string)
 
@@ -336,7 +336,7 @@ if ( cur == "UAN"){
 
 }
 
-function n7(){
+function n1_7(){
   let mone = +(prompt("сумма покупки")as string)
 
   let per3 = mone * 0.03
@@ -361,7 +361,7 @@ else(mone > 500)
 }
 }
 
-function n8(){
+function n1_8(){
   let D = +(prompt("длина окружности")as string)
   let P = +(prompt("периметр кадрата")as string)
   P /= 4
