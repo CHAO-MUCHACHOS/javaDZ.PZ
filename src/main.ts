@@ -8,32 +8,62 @@ let Dz1 = document.querySelector('#dz-class1')
 
 
 
-const DZ1 = document.querySelector('#btn2.1')
-DZ1?.addEventListener('click', n1_1 )
+const DZ1_1 = document.querySelector('#btn2_1')
+DZ1_1?.addEventListener('click', n1_1 )
 
-const DZ2 = document.querySelector('#btn2.2')
-DZ2?.addEventListener('click', n1_2 )
+const DZ1_2 = document.querySelector('#btn2_2')
+DZ1_2?.addEventListener('click', n1_2 )
 
-const DZ3 = document.querySelector('#btn2.3')
-DZ3?.addEventListener('click', n1_3 )
+const DZ1_3 = document.querySelector('#btn2_3')
+DZ1_3?.addEventListener('click', n1_3 )
 
-const DZ4 = document.querySelector('#btn2.4')
-DZ4?.addEventListener('click', n1_4 )
+const DZ1_4 = document.querySelector('#btn2_4')
+DZ1_4?.addEventListener('click', n1_4 )
 
-const DZ5 = document.querySelector('#btn2.5')
-DZ5?.addEventListener('click', n1_5 )
+const DZ1_5 = document.querySelector('#btn2_5')
+DZ1_5?.addEventListener('click', n1_5 )
 
-const DZ6 = document.querySelector('#btn2.6')
-DZ6?.addEventListener('click', n1_6 )
+const DZ1_6 = document.querySelector('#btn2_6')
+DZ1_6?.addEventListener('click', n1_6 )
 
-const DZ7 = document.querySelector('#btn2.7')
-DZ7?.addEventListener('click', n1_7 )
+const DZ1_7 = document.querySelector('#btn2_7')
+DZ1_7?.addEventListener('click', n1_7 )
 
-const DZ8 = document.querySelector('#btn2.8')
-DZ8?.addEventListener('click', n1_8 )
+const DZ1_8 = document.querySelector('#btn2_8')
+DZ1_8?.addEventListener('click', n1_8 )
 
-const DZ2_1 = document.querySelector('#btn2.8')
+
+
+const DZ2_1 = document.querySelector('#btn3_1')
 DZ2_1?.addEventListener('click', n2_1 )
+
+
+const DZ2_2 = document.querySelector('#btn3_2')
+DZ2_2?.addEventListener('click', n2_2 )
+
+const DZ2_3 = document.querySelector('#btn3_3')
+DZ2_3?.addEventListener('click', n2_3 )
+
+const DZ2_4 = document.querySelector('#btn3_4')
+DZ2_4?.addEventListener('click', n2_4 )
+
+const DZ2_5 = document.querySelector('#btn3_5')
+DZ2_5?.addEventListener('click', n2_5 )
+
+const DZ2_6 = document.querySelector('#btn3_6')
+DZ2_6?.addEventListener('click', n2_6 )
+
+const DZ2_7 = document.querySelector('#btn3_7')
+DZ2_7?.addEventListener('click', n2_7 )
+
+const DZ2_8 = document.querySelector('#btn3_8')
+DZ2_8?.addEventListener('click', n2_8 )
+
+const DZ2_9 = document.querySelector('#btn3_9')
+DZ2_9?.addEventListener('click', n2_9 )
+
+const DZ2_10 = document.querySelector('#btn3_10')
+DZ2_10?.addEventListener('click', n2_10 )
 
 
 const sad = document.querySelector('#inf')
@@ -374,10 +404,114 @@ else{
 
 }
 
+
+// ?Подсчитать сумму всех чисел в заданном пользователем
+//? диапазоне.
+
 function n2_1(){
   let num1 = +(prompt("числа от")as string)
   let num2 = +(prompt("числа до")as string)
+  let i = 0
+
+  while(num1 <= num2){
+ i = i + num1
+ num1++
+  }
+  alert(i)
+}
 
 
- 
+function n2_2(){
+  let num1 = +(prompt("первое число")as string)
+  let num2 = +(prompt("второе число")as string)
+  while (num1 != 0 && num2 != 0){
+    if(num1 > num2){
+        num1 = num1%num2
+    }else{
+      num2=num2%num1
+    }
+}
+alert(num1+num2)
+}
+
+function n2_3(){
+  let num = +(prompt("введите число")as string)
+  
+ for(let i = 1; i<=num; i++ ){
+  if( num%i ==0){
+    console.log(i);
+  }
+ }
+}
+
+function n2_4(){
+  let num = +(prompt("введите число")as string)
+  let i =0
+while(num > 0){
+num/=10
+num = Math.round(num)
+i++
+}
+alert(i)
+}
+
+function n2_5(){
+  
+    let i =0
+    let a =0
+    let b =0
+    let c = 0
+    let d =0
+    let e =0
+      do{
+
+        let num = +(prompt("введите число")as string)
+        if(num > 0){
+          a++
+        }
+        else if(num == 0){
+          b++
+    }
+    else{
+      c++
+    }
+    if(num%2 == 0){
+      d++
+    }else{
+      e++
+    }
+i++
+
+  } while(i < 10)
+  alert(`${a} положительных; ${c} отрицательных; ${b} равно нулю; ${d} четных; нечетных${e} `)
+  
+
+}
+
+function n2_6(){
+  let num1 = +(prompt("введите первое число")as string)
+  let num2 = +(prompt("введите второе число")as string)
+  let sign = prompt("введите знак")as string
+  console.log(sign);
+  
+}
+
+
+
+
+
+function n2_7(){
+
+}
+
+function n2_8(){
+
+}
+
+function n2_9(){
+
+}
+
+function n2_10(){
+
 }
