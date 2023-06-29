@@ -60,3 +60,6 @@ summary{
   margin-bottom: 30px;
 }
 
+.all-dz {
+  display: flex;
+}

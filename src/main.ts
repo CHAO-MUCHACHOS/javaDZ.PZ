@@ -4,36 +4,37 @@ import './style.css'
 // //@ts-ignore
 // document.getElementById("demo").innerHTML = 11;
 
-let Dz1 = document.querySelector('#test')
+let Dz1 = document.querySelector('#dz-class1')
 
 let qwst = document.querySelector('#quest')
 
-const DZ1 = document.querySelector('#btn1')
+const DZ1 = document.querySelector('#btn2.1')
 DZ1?.addEventListener('click', n1 )
 
-const DZ2 = document.querySelector('#btn2')
+const DZ2 = document.querySelector('#btn2.2')
 DZ2?.addEventListener('click', n2 )
 
-const DZ3 = document.querySelector('#btn3')
+const DZ3 = document.querySelector('#btn2.3')
 DZ3?.addEventListener('click', n3 )
 
-const DZ4 = document.querySelector('#btn4')
+const DZ4 = document.querySelector('#btn2.4')
 DZ4?.addEventListener('click', n4 )
 
-const DZ5 = document.querySelector('#btn5')
+const DZ5 = document.querySelector('#btn2.5')
 DZ5?.addEventListener('click', n5 )
 
-const DZ6 = document.querySelector('#btn6')
+const DZ6 = document.querySelector('#btn2.6')
 DZ6?.addEventListener('click', n6 )
 
-const DZ7 = document.querySelector('#btn7')
+const DZ7 = document.querySelector('#btn2.7')
 DZ7?.addEventListener('click', n7 )
 
-const DZ8 = document.querySelector('#btn8')
+const DZ8 = document.querySelector('#btn2.8')
 DZ8?.addEventListener('click', n8 )
 
-const DZ9 = document.querySelector('#btn9')
-DZ9?.addEventListener('click', n9 )
+const DZ2_1 = document.querySelector('#btn2.8')
+DZ2_1?.addEventListener('click', n2_1 )
+
 
 const sad = document.querySelector('#inf')
 sad?.addEventListener('click', info)
@@ -373,8 +374,10 @@ else{
 
 }
 
-function n9(){
+function n2_1(){
+  let num1 = +(prompt("числа от")as string)
+  let num2 = +(prompt("числа до")as string)
 
-  
 
+ 
 }
