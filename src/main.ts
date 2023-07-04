@@ -59,8 +59,6 @@ DZ2_9?.addEventListener("click", n2_9);
 const DZ2_10 = document.querySelector("#btn3_10");
 DZ2_10?.addEventListener("click", n2_10);
 
-
-
 // const DZ5_1 = document.querySelector("#btn5_1");
 // DZ5_1?.addEventListener("click", n5_1);
 
@@ -79,113 +77,16 @@ DZ2_10?.addEventListener("click", n2_10);
 // const DZ5_6 = document.querySelector("#btn5_6");
 // DZ5_6?.addEventListener("click", n5_6);
 
-
-
 const sad = document.querySelector("#inf");
 sad?.addEventListener("click", info);
 
-// DZ1.innerText = "полиндром"
+
 function info() {
   alert("первые ДЗ и ПЗ потерялись xD");
 }
 
-// switch(Переменная)){
-//     case "HTTP": (с чем сравнивает)
-//     Переменная = "Hypertext transfer protocol"; (присваивает)
-//     break; (конец)
-// let X = +( prompt ("Введите число") as string)
 
-// do {
-//     statement1;
-//     statement2;
-//     statement3;
-//    } while(condition)
 
-// alert()
-
-// confirm()
-
-// prompt
-
-// let num= +(prompt('число ') as string)
-
-// #1-2
-// let num = +(prompt('число ') as string)
-// if(num%2 !== 0){
-//     num-=1
-// }
-
-// for(let i = 2 ; i<num; i++){
-
-// if(i % 2 == 0){
-//     console.log(i);
-// }
-
-// }
-// console.log(i);
-
-// #3
-// function div (x){
-
-// for(let i=1;i<=x; i++){
-
-// if(x%i==0) console.log(i);
-
-// }
-// }
-
-// div(10)
-
-// #6
-// function dayOfWork(x) {
-//     let days = 0
-//     while(x>=10){
-//     x = x-x/10
-//     days++
-//     }
-// return days
-
-// }
-
-// console.log(9,
-//     dayOfWork(10)
-//     )
-
-// const input1 = document.querySelector('input')
-
-// const button1 = document.querySelector('button')
-
-// const output1 = document.querySelector('#output')
-
-// let x = +(prompt("Введите число")as string)
-// x = x * x
-// console.log(x);
-// 12345
-
-// ---------------------------------------------------------
-// 9 PZ
-
-// let x = +(prompt(`Введите 5-ти значное число`)as string)
-//  let lastNum= x % 10
-//  String(lastNum)
-// let y = x % 10
-//  x -= y
-//  x /= 10
-
-//  console.log(`${lastNum}${x}`);
-
-//? какое-то ДЗ
-// let a = +(prompt("1")as string)
-// let b = +(prompt("2")as string)
-// let x = (a + b)
-// let result = (x < 4) ? "мало" : "Много"
-
-// console.log(result)
-
-//?  DZ 2 #1
-//?Запросить у пользователя его возраст и определить, кем он
-//? является: ребенком (0–2), подростком (12–18), взрослым
-//? (18_60) или пенсионером (60– ...).
 
 function n1_1() {
   let age = +(prompt("Введите возраст") as string);
@@ -200,10 +101,6 @@ function n1_1() {
     alert("Дед");
   }
 }
-
-//? Запросить у пользователя число от 0 до 9 и вывести ему
-//? спецсимвол, который расположен на этой клавише (1–!,
-//? 2–@, 3–# и т. д).
 
 function n1_2() {
   let num = +(prompt("Число") as string);
@@ -253,7 +150,6 @@ function n1_2() {
   }
 }
 
-//? Запросить у пользователя трехзначное и число и проверить, есть ли в нем одинаковые цифры.
 function n1_3() {
   let num = +(prompt("Число") as string);
   let firstNum = num / 100;
@@ -268,9 +164,7 @@ function n1_3() {
     alert("нет совпадений");
   }
 }
-//? Запросить у пользователя год и проверить, високосный он
-//?или нет. Високосный год либо кратен 400, либо кратен 4 и
-//?при этом не кратен 100
+
 function n1_4() {
   let num = +(prompt("год") as string);
   let yer = num % 400;
@@ -283,7 +177,6 @@ function n1_4() {
   }
 }
 
-//? Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
 function n1_5() {
   let num = +(prompt("5 значное число") as string);
 
@@ -368,9 +261,6 @@ function n1_8() {
   }
 }
 
-// ?Подсчитать сумму всех чисел в заданном пользователем
-//? диапазоне.
-
 function n2_1() {
   let num1 = +(prompt("числа от") as string);
   let num2 = +(prompt("числа до") as string);
@@ -401,7 +291,7 @@ function n2_3() {
 
   for (let i = 1; i <= num; i++) {
     if (num % i == 0) {
-      console.log(i);
+      alert(i);
     }
   }
 }
@@ -528,37 +418,27 @@ function n2_8() {
 }
 
 function n2_9() {
-  alert("слишком муторно")
+  alert("слишком муторно");
 }
 
 function n2_10() {
   let hidNumb = +(prompt("введите число от 0 до 100") as string);
- let a 
- let num = 50
+  let a;
+  let num = 50;
 
+  do {
+    a = confirm(`ваше чсило > ${num}`);
+    if (a == true) {
+      num += 1;
+    }
 
-
-do{
-
-  a = confirm(`ваше чсило > ${num}`)
-  if(a == true){
-  num += 1
+    a = confirm(`ваше чсило < ${num}`);
+    if (a == true) {
+      num -= 1;
+    }
+    a = confirm(`ваше чсило == ${num}`);
+    if (a == true) {
+      confirm(`ваше чсило ${num}`);
+    }
+  } while (num > hidNumb || num < hidNumb);
 }
-
-a = confirm(`ваше чсило < ${num}`)
-if(a == true){
-  
-num -= 1
-}
-a = confirm(`ваше чсило == ${num}`)
-if(a == true){
-confirm(`ваше чсило ${num}`)
-}
-
-}while(num > hidNumb || num< hidNumb)
-
-
-
-
-}
-
