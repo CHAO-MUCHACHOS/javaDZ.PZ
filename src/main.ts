@@ -59,6 +59,28 @@ DZ2_9?.addEventListener("click", n2_9);
 const DZ2_10 = document.querySelector("#btn3_10");
 DZ2_10?.addEventListener("click", n2_10);
 
+
+
+// const DZ5_1 = document.querySelector("#btn5_1");
+// DZ5_1?.addEventListener("click", n5_1);
+
+// const DZ5_2 = document.querySelector("#btn5_2");
+// DZ5_2?.addEventListener("click", n5_2);
+
+// const DZ5_3 = document.querySelector("#btn5_3");
+// DZ5_3?.addEventListener("click", n5_3);
+
+// const DZ5_4 = document.querySelector("#btn5_4");
+// DZ5_4?.addEventListener("click", n5_4);
+
+// const DZ5_5 = document.querySelector("#btn5_5");
+// DZ5_5?.addEventListener("click", n5_5);
+
+// const DZ5_6 = document.querySelector("#btn5_6");
+// DZ5_6?.addEventListener("click", n5_6);
+
+
+
 const sad = document.querySelector("#inf");
 sad?.addEventListener("click", info);
 
@@ -458,34 +480,85 @@ function n2_6() {
 }
 
 function n2_7() {
-  let num1 = +(prompt("введите число") as string);  
-  let num2 = +(prompt("на сколько сдвинуть?") as string);
-let i = 0
-
-
-
-  // кол-во цифр в num1
-  while(num1 > 0){
-    num1 /= 10
-    num1 = Math.trunc(num1)
-    i++
+  alert("скоро будет");
 }
 
-i-=num2
+function n2_8() {
+  let i = 0;
+  let a = true;
 
-while(num1 > i){
-  num1 /= 10
-  num1 = Math.trunc(num1)
-  i++
-  }
-console.log(num1);
+  do {
+    switch (i) {
+      case 0:
+        a = confirm("Понедельник. Хотите увидеть следующий день? ");
+        i++;
+        break;
+
+      case 1:
+        a = confirm("Вторник. Хотите увидеть следующий день? ");
+        i++;
+        break;
+
+      case 2:
+        a = confirm("Среда. Хотите увидеть следующий день? ");
+        i++;
+        break;
+
+      case 3:
+        a = confirm("Четверг. Хотите увидеть следующий день? ");
+        i++;
+        break;
+
+      case 4:
+        a = confirm("Пятница. Хотите увидеть следующий день? ");
+        i++;
+        break;
+
+      case 5:
+        a = confirm("Субота. Хотите увидеть следующий день? ");
+        i++;
+        break;
+
+      case 6:
+        a = confirm("Воскресенье. Хотите увидеть следующий день? ");
+        i++;
+        break;
+    }
+  } while (a == true);
+}
+
+function n2_9() {
+  alert("слишком муторно")
+}
+
+function n2_10() {
+  let hidNumb = +(prompt("введите число от 0 до 100") as string);
+ let a 
+ let num = 50
 
 
+
+do{
+
+  a = confirm(`ваше чсило > ${num}`)
+  if(a == true){
+  num += 1
+}
+
+a = confirm(`ваше чсило < ${num}`)
+if(a == true){
   
+num -= 1
+}
+a = confirm(`ваше чсило == ${num}`)
+if(a == true){
+confirm(`ваше чсило ${num}`)
 }
 
-function n2_8() {}
+}while(num > hidNumb || num< hidNumb)
 
-function n2_9() {}
 
-function n2_10() {}
+
+
+}
+
