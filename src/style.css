@@ -63,3 +63,45 @@ summary{
 .all-dz {
   display: flex;
 }
+
+
+
+/* html, body{
+  height: 100%;
+}
+ .bg{
+  z-index: -1;
+position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgb(244, 122, 118), rgb(248, 188, 74));
+}
+.circle{
+  top: 10%;
+  left: 10%;
+  border-radius: 150px;
+  z-index: 1;
+  position: relative;
+height: 250px;
+width: 250px;
+background-image: linear-gradient(rgb(248, 188, 74),rgb(244, 122, 118) );
+
+}
+
+.circle_sec{
+  top: -10%;
+  left: -10%;
+  border-radius: 150px;
+  z-index: 1;
+  position: relative;
+height: 250px;
+width: 250px;
+background-image: linear-gradient(rgb(244, 122, 118),rgb(248, 188, 74) );
+
+
+
+} */

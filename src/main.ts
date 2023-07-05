@@ -88,6 +88,7 @@ function info() {
 
 
 
+
 function n1_1() {
   let age = +(prompt("Введите возраст") as string);
 
@@ -442,3 +443,4 @@ function n2_10() {
     }
   } while (num > hidNumb || num < hidNumb);
 }
+
