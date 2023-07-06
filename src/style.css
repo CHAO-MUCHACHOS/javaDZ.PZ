@@ -8,7 +8,7 @@ footer {
   text-align: center;
   width: 40px;
   height: 20px;
-  background-color: rgb(244, 122, 118);
+  
   z-index: 2;
   position: relative;
   top: 475px;
@@ -34,10 +34,10 @@ details {
   width: 120px;
   border-radius: 10px;
   background: #333;
-  justify-content: center;
-  align-items: center;
   box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
     inset -5px -5px 10px #222;
+  justify-content: center;
+  align-items: center;
   font-family: sans-serif;
   border: none;
   font-size: 16px;
@@ -248,6 +248,17 @@ footer:active {
   font-weight: bold;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 .btn {
   position: relative;
   top: 73vh;
@@ -256,20 +267,25 @@ footer:active {
   background: #e3edf7;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-    -6px 0px 10px -1px rgba(255, 255, 255, 0.7);
+  background: #333;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
+    inset -5px -5px 10px #222;
   border: 1px solid rgba(0, 0, 0, 0);
   cursor: pointer;
   transition: transform 0.5s;
+  transition: 500ms;
 }
 
 .btn:hover {
-  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
-    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  background: #333;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
+    inset -5px -5px 10px #222;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transform: translateY(0.5em);
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222,
+    inset -5px -5px 10px #444;
+  color: #d6d6d6;
+  transition: 500ms;
 }
 
 .btn svg {
@@ -278,7 +294,7 @@ footer:active {
 
 .btn:hover svg {
   transform: scale(0.9);
-  fill: #333333;
+  fill: #ffffff;
 }
 
 /* html, body{
