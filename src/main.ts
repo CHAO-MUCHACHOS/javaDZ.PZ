@@ -59,23 +59,16 @@ DZ2_9?.addEventListener("click", n2_9);
 const DZ2_10 = document.querySelector("#btn3_10");
 DZ2_10?.addEventListener("click", n2_10);
 
-// const DZ5_1 = document.querySelector("#btn5_1");
-// DZ5_1?.addEventListener("click", n5_1);
+const DZ3_1 = document.querySelector("#btn2_1_1");
+DZ3_1?.addEventListener("click", n3_1);
 
-// const DZ5_2 = document.querySelector("#btn5_2");
-// DZ5_2?.addEventListener("click", n5_2);
+const DZ3_2 = document.querySelector("#btn2_1_1");
+DZ3_2?.addEventListener("click", n3_2);
 
-// const DZ5_3 = document.querySelector("#btn5_3");
-// DZ5_3?.addEventListener("click", n5_3);
+const DZ3_3 = document.querySelector("#btn2_1_1");
+DZ3_3?.addEventListener("click", n3_3);
 
-// const DZ5_4 = document.querySelector("#btn5_4");
-// DZ5_4?.addEventListener("click", n5_4);
 
-// const DZ5_5 = document.querySelector("#btn5_5");
-// DZ5_5?.addEventListener("click", n5_5);
-
-// const DZ5_6 = document.querySelector("#btn5_6");
-// DZ5_6?.addEventListener("click", n5_6);
 
 const sad = document.querySelector("#inf");
 sad?.addEventListener("click", info);
@@ -443,4 +436,17 @@ function n2_10() {
     }
   } while (num > hidNumb || num < hidNumb);
 }
+function n3_1(){
 
+
+}
+
+function n3_2(){
+
+  
+}
+
+function n3_3(){
+
+  
+}
