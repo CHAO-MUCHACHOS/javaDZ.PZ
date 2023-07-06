@@ -62,25 +62,18 @@ DZ2_10?.addEventListener("click", n2_10);
 const DZ3_1 = document.querySelector("#btn2_1_1");
 DZ3_1?.addEventListener("click", n3_1);
 
-const DZ3_2 = document.querySelector("#btn2_1_1");
+const DZ3_2 = document.querySelector("#btn2_1_2");
 DZ3_2?.addEventListener("click", n3_2);
 
-const DZ3_3 = document.querySelector("#btn2_1_1");
+const DZ3_3 = document.querySelector("#btn2_1_3");
 DZ3_3?.addEventListener("click", n3_3);
-
-
 
 const sad = document.querySelector("#inf");
 sad?.addEventListener("click", info);
 
-
 function info() {
   alert("первые ДЗ и ПЗ потерялись xD");
 }
-
-
-
-
 
 function n1_1() {
   let age = +(prompt("Введите возраст") as string);
@@ -436,17 +429,61 @@ function n2_10() {
     }
   } while (num > hidNumb || num < hidNumb);
 }
-function n3_1(){
+function n3_1() {
+  let car = {
+    prod: "Lada",
+    model: "Lada Niva",
+    yearOfIssue: 1997,
+    averageSpeed: 85,
+  };
+  alert(`производитель: ${car.prod} 
+модель: ${car.model}
+год выпуска: ${car.yearOfIssue}
+средняя скорость: ${car.averageSpeed}
+время в дороге: ${reqTime()} часа
+`);
+  function reqTime() {
+    let dist = +(prompt("растояние") as string);
+    dist /= car.averageSpeed;
+    if (dist > 4) {
+      dist += 1;
+      //@ts-ignore
+      dist = dist.toFixed(2);
+      return dist;
+    } else {
+      //@ts-ignore
+      dist = dist.toFixed(2);
+      return dist;
+    }
+  }
+}
+
+function n3_2() {
+
+
+// let numDenom = {
+// numer: +(prompt("числитель") as string),
+// denom: +(prompt("знаменатель") as string),
+// }
 
 
 }
 
-function n3_2(){
+function n3_3() {
 
-  
-}
+  let time = {
+  sec: 23,
+  min: 41,
+  hour: 15
+  }
 
-function n3_3(){
+//@ts-ignore
+document.getElementById("demo").innerHTML = (`${time.hour}:${time.min}:${time.sec}`);
 
-  
+let sum = +(prompt("прибавить секунд") as string)
+
+
+
+
+
 }

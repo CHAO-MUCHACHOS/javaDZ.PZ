@@ -2,6 +2,11 @@ body {
   background-color: rgb(33, 33, 33);
 }
 
+.dz2_1_3{
+  color: white;
+  padding: 10px;
+}
+
 footer {
   color: white;
   border-radius: 10px;
@@ -41,7 +46,7 @@ details {
   font-family: sans-serif;
   border: none;
   font-size: 16px;
-  color: rgb(161, 161, 161);
+  color: rgb(255, 255, 255);
   transition: 500ms;
 }
 
@@ -58,7 +63,7 @@ details {
   font-family: sans-serif;
   border: none;
   font-size: 16px;
-  color: rgb(161, 161, 161);
+  color: rgb(255, 255, 255);
   transition: 500ms;
 }
 
