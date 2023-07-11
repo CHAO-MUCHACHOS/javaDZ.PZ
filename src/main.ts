@@ -460,13 +460,26 @@ function n3_1() {
 
 function n3_2() {
 
-// let numDenom = {
-// numer: +(prompt("числитель") as string),
-// denom: +(prompt("знаменатель") as string),
-// }
+let numDenom = {
+numer: +(prompt("числитель") as string),
+denom: +(prompt("знаменатель") as string),
+frect: '/',
+}
+
+//@ts-ignore
+document.getElementById("sum").innerHTML = ("<style> .mane_button{ height: 100px;} </style>");
+
+
 
 
 }
+
+
+
+
+
+
+
 
 function n3_3() {
 
