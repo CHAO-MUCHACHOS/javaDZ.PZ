@@ -499,14 +499,38 @@ function n3_3() {
     min: 41,
     sec: 23
   }
+  
+  let inputSec = document.querySelector('#inp1')
+  let inputMin = document.querySelector('#inp2')
+  let inputHour = document.querySelector('#inp3')
+  //@ts-ignore
+  time.sec = inputSec.value
+  //@ts-ignore
+  time.min = inputMin.value
+  //@ts-ignore
+  time.hour = inputHour.value
+  
+
+  //@ts-ignore
+  document.getElementById("demo").innerHTML = (`${time.hour}:${time.min}:${time.sec}`);
+  
+  
+  
+  
+if (time.sec > 60){
+time.min +=(time.sec - 60)
+if(time.min > 60){
+time.hour +=(time.min - 60)
+if(time.hour > 24){
+  time.hour -= 24
+}
+}
+}
+
+
+
 
 //@ts-ignore
-document.getElementById("demo").innerHTML = (`${time.hour}:${time.min}:${time.sec}`);
-
-let sum = +(prompt("прибавить секунд") as string)
-
-
-
-
-
+document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button3{ height: 200px; text-align: start; display:flex;flex-direction: column;align-items: center;justify-content: flex-start; } .input{ display:block;} </style>" );
 }
+

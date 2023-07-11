@@ -314,9 +314,17 @@ footer:active {
   color: white;
 }
 
+.none{
+  display: none;
+}
+
+.inpSec{
+background-color: #444;
+width: 20px;
+height: 10px;
 
 
-
+}
 /* html, body{
   height: 100%;
 }
