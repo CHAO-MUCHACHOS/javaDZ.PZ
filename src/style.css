@@ -48,9 +48,10 @@ details {
   font-size: 16px;
   color: rgb(255, 255, 255);
   transition: 500ms;
+  
 }
 
-.mane_button {
+.mane_button, .mane_button1, .mane_button2, .mane_button3 {
   margin: 20px 30px 12px 10px;
   height: 80px;
   width: 180px;
@@ -67,7 +68,7 @@ details {
   transition: 500ms;
 }
 
-.mane_button:hover {
+.mane_button:hover, .mane_button1:hover, .mane_button2:hover, .mane_button3:hover {
   box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222,
     inset -5px -5px 10px #444;
   color: #d6d6d6;

@@ -462,16 +462,41 @@ function n3_2() {
 
 let numDenom = {
 numer: +(prompt("числитель") as string),
-denom: +(prompt("знаменатель") as string),
 frect: '/',
+denom: +(prompt("знаменатель") as string),
+}
+function sum(){
+  numDenom.numer += numDenom.numer
+  return numDenom.numer
+}
+function sub(){
+  numDenom.numer -= numDenom.numer
+  return numDenom.numer
+}
+function div(){
+  numDenom.numer *= numDenom.numer
+  return numDenom.numer
+numDenom.denom *= numDenom.denom
+return numDenom.denom
+
 }
 
+function mult(){
+  
+}
+
+
+
+
+
 //@ts-ignore
-document.getElementById("sum").innerHTML = ("<style> .mane_button{ height: 100px;} </style>");
+document.getElementById("sum").innerHTML = (`сумма: ${sum() +numDenom.frect + numDenom.denom}`
+`dwqdw`
+)
 
 
-
-
+//@ts-ignore
+document.getElementById("size").innerHTML = ( "  <style> .mane_button2{ height: 100px; text-align: start; display:flex;flex-direction: column;align-items: center;justify-content: flex-start; } </style>" );
 }
 
 
