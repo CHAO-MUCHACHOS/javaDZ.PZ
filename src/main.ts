@@ -465,38 +465,24 @@ numer: +(prompt("числитель") as string),
 frect: '/',
 denom: +(prompt("знаменатель") as string),
 }
-function sum(){
-  numDenom.numer += numDenom.numer
-  return numDenom.numer
-}
-function sub(){
-  numDenom.numer -= numDenom.numer
-  return numDenom.numer
-}
-function div(){
-  numDenom.numer *= numDenom.numer
-  return numDenom.numer
-numDenom.denom *= numDenom.denom
-return numDenom.denom
-
-}
-
-function mult(){
-  
-}
-
-
-
-
 
 //@ts-ignore
-document.getElementById("sum").innerHTML = (`сумма: ${sum() +numDenom.frect + numDenom.denom}`
-`dwqdw`
-)
-
+document.getElementById("sum").innerHTML = (`сумма: ${numDenom.numer*2 + numDenom.frect + numDenom.denom}`)
 
 //@ts-ignore
-document.getElementById("size").innerHTML = ( "  <style> .mane_button2{ height: 100px; text-align: start; display:flex;flex-direction: column;align-items: center;justify-content: flex-start; } </style>" );
+document.getElementById("sub").innerHTML = (`вычитание: ${numDenom.numer - numDenom.numer +numDenom.frect + numDenom.denom}`)
+
+//@ts-ignore
+document.getElementById("div").innerHTML = (`умножение: ${numDenom.numer*numDenom.numer + numDenom.frect + numDenom.denom*numDenom.denom}`)
+
+//@ts-ignore
+document.getElementById("mult").innerHTML = (`деление: ${numDenom.numer/numDenom.numer + numDenom.frect + numDenom.denom/numDenom.denom}`)
+
+//@ts-ignore
+document.getElementById("red").innerHTML = (`сокращение: ${numDenom.numer/numDenom.denom}`)
+
+//@ts-ignore
+document.getElementById("size").innerHTML = ( "  <style> .mane_button2{ height: 125px; text-align: start; display:flex;flex-direction: column;align-items: center;justify-content: flex-start; } </style>" );
 }
 
 
