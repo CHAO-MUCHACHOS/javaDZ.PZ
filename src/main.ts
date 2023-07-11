@@ -460,7 +460,6 @@ function n3_1() {
 
 function n3_2() {
 
-
 // let numDenom = {
 // numer: +(prompt("числитель") as string),
 // denom: +(prompt("знаменатель") as string),
@@ -472,9 +471,9 @@ function n3_2() {
 function n3_3() {
 
   let time = {
-  sec: 23,
-  min: 41,
-  hour: 15
+    hour: 15,
+    min: 41,
+    sec: 23
   }
 
 //@ts-ignore

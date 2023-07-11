@@ -34,9 +34,9 @@ summary {
 
 details {
   text-align: center;
-  margin: 12px;
-  height: 50px;
-  width: 120px;
+  margin: 30px 12px 12px 12px;
+  height: 80px;
+  width: 170px;
   border-radius: 10px;
   background: #333;
   box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
@@ -51,9 +51,9 @@ details {
 }
 
 .mane_button {
-  margin: 12px;
-  height: 50px;
-  width: 120px;
+  margin: 20px 30px 12px 10px;
+  height: 80px;
+  width: 180px;
   border-radius: 10px;
   background: #333;
   justify-content: center;
