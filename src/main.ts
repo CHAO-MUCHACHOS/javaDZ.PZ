@@ -532,7 +532,7 @@ time.min++
 
 
 //@ts-ignore
-document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button3{ height: 200px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:block;} </style>" );
+document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button3{ height: 200px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:flex;} </style>" );
 }
 
 
