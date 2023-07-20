@@ -500,29 +500,32 @@ function n3_3() {
     sec: 23
   }
   
-  
-  
-  
   let inputSec = document.querySelector('#inp1')
   //@ts-ignore
   time.sec = inputSec.value
+
+  let inputMin = document.querySelector('#inp2')
+  //@ts-ignore
+  time.min = inputMin.value
+  
+  let inputHour = document.querySelector('#inp3')
+  //@ts-ignore
+  time.hour = inputHour.value
+  
+  
+  
+  
 while (time.sec > 60){
 time.sec -= 60
 time.min++
 }
 
-let inputMin = document.querySelector('#inp2')
-//@ts-ignore
-time.min = inputMin.value
   while(time.min > 60){
     time.min -= 60
     time.hour++
   }
   
   
-  let inputHour = document.querySelector('#inp3')
-//@ts-ignore
-time.hour = inputHour.value
     while(time.hour > 24){
     time.hour -= 24
   }
