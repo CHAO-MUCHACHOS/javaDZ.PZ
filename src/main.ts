@@ -516,21 +516,25 @@ function n3_3() {
   
   
   
-  
-if (time.sec > 60){
-time.min +=(time.sec - 60)
-if(time.min > 60){
-time.hour +=(time.min - 60)
-if(time.hour > 24){
-  time.hour -= 24
-}
-}
+while (time.sec > 60){
+time.sec -= 60
+time.min++
+  while(time.min > 60){
+  time.min -= 60
+  time.hour++
+    while(time.hour > 24){
+    time.hour -= 24
+    }
+  }
 }
 
 
 
 
 //@ts-ignore
-document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button3{ height: 200px; text-align: start; display:flex;flex-direction: column;align-items: center;justify-content: flex-start; } .input{ display:block;} </style>" );
+document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button3{ height: 200px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:block;} </style>" );
 }
+
+
+
 

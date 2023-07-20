@@ -318,11 +318,11 @@ footer:active {
   display: none;
 }
 
-.inpSec{
+.inpSec, .inpMin, .inpHour {
 background-color: #444;
 width: 20px;
 height: 10px;
-
+display: none;
 
 }
 /* html, body{
