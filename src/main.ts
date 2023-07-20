@@ -500,39 +500,41 @@ function n3_3() {
     sec: 23
   }
   
+  
+  
+  
   let inputSec = document.querySelector('#inp1')
-  let inputMin = document.querySelector('#inp2')
-  let inputHour = document.querySelector('#inp3')
   //@ts-ignore
   time.sec = inputSec.value
-  //@ts-ignore
-  time.min = inputMin.value
-  //@ts-ignore
-  time.hour = inputHour.value
-  
+while (time.sec > 60){
+time.sec -= 60
+time.min++
+}
 
+let inputMin = document.querySelector('#inp2')
+//@ts-ignore
+time.min = inputMin.value
+  while(time.min > 60){
+    time.min -= 60
+    time.hour++
+  }
+  
+  
+  let inputHour = document.querySelector('#inp3')
+//@ts-ignore
+time.hour = inputHour.value
+    while(time.hour > 24){
+    time.hour -= 24
+  }
+  
   //@ts-ignore
   document.getElementById("demo").innerHTML = (`${time.hour}:${time.min}:${time.sec}`);
   
   
-  
-while (time.sec > 60){
-time.sec -= 60
-time.min++
-  while(time.min > 60){
-  time.min -= 60
-  time.hour++
-    while(time.hour > 24){
-    time.hour -= 24
-    }
-  }
-}
-
-
 
 
 //@ts-ignore
-document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button3{ height: 200px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:flex;} </style>" );
+document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button3{ height: 100px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:flex;} </style>" );
 }
 
 

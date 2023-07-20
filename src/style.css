@@ -320,10 +320,15 @@ footer:active {
 
 .inpSec, .inpMin, .inpHour {
 background-color: #444;
-width: 20px;
+width: 30px;
 height: 10px;
 display: none;
 color: white;
+margin: 5px;
+}
+
+.allInp{
+  display: flex;
 }
 /* html, body{
   height: 100%;
