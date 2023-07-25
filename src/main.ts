@@ -588,11 +588,14 @@ function n4_4(){
 }
 
 
-function Clock() {
-  
-  let timer:any
 
-  function render() {
+class Clock {
+  timer:any
+ constructor ({template}:any){
+  this.template = template
+ }
+  
+   render() {
     let date = new Date();
 
     let hours = (date.getHours())as any
@@ -605,7 +608,7 @@ function Clock() {
     if (secs < 10) secs = '0' + secs
 
     let template:any
-    let output = template
+    let output = this.template
       .replace('h', hours)
       .replace('m', mins)
       .replace('s', secs)
@@ -613,16 +616,18 @@ function Clock() {
     console.log(output)
   }
 
-  this.stop = function() {
-    clearInterval(timer)
-  };
-
-  this.start = function() {
-    render()
-    timer = setInterval(render, 1000)
+  stop = function() {
+    clearInterval(this.timer)
   }
 
-}
+  start = function() {
+    this.render()
+    timer = setInterval(()=>this.render, 1000)
+  }
 
+
+
+
+}
 let clock = new Clock({template: 'h:m:s'})
 clock.start()
