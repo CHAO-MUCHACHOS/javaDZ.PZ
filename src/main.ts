@@ -68,6 +68,22 @@ DZ3_2?.addEventListener("click", n3_2);
 const DZ3_3 = document.querySelector("#btn2_1_3");
 DZ3_3?.addEventListener("click", n3_3);
 
+const DZ3_2_1 = document.querySelector("#btn2_2_1");
+DZ3_3?.addEventListener("click", n4_1);
+
+const DZ3_2_2 = document.querySelector("#btn2_2_2");
+DZ3_3?.addEventListener("click", n4_2);
+
+const DZ3_2_3 = document.querySelector("#btn2_2_3");
+DZ3_3?.addEventListener("click", n4_3);
+
+const DZ3_2_4 = document.querySelector("#btn2_2_4");
+DZ3_3?.addEventListener("click", n4_4);
+
+
+
+
+
 const sad = document.querySelector("#inf");
 sad?.addEventListener("click", info);
 
@@ -541,5 +557,40 @@ document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button3{ heig
 }
 
 
+function n4_1(){
+let basket = [
+  
 
 
+
+
+
+
+
+
+
+]
+
+
+
+
+}
+
+
+
+
+
+
+
+
+function n4_2(){
+
+}
+
+function n4_3(){
+
+}
+
+function n4_4(){
+
+}
