@@ -69,16 +69,16 @@ const DZ3_3 = document.querySelector("#btn2_1_3");
 DZ3_3?.addEventListener("click", n3_3);
 
 const DZ3_2_1 = document.querySelector("#btn2_2_1");
-DZ3_3?.addEventListener("click", n4_1);
+DZ3_2_1?.addEventListener("click", n4_1);
 
 const DZ3_2_2 = document.querySelector("#btn2_2_2");
-DZ3_3?.addEventListener("click", n4_2);
+DZ3_2_2?.addEventListener("click", n4_2);
 
 const DZ3_2_3 = document.querySelector("#btn2_2_3");
-DZ3_3?.addEventListener("click", n4_3);
+DZ3_2_3?.addEventListener("click", n4_3);
 
 const DZ3_2_4 = document.querySelector("#btn2_2_4");
-DZ3_3?.addEventListener("click", n4_4);
+DZ3_2_4?.addEventListener("click", n4_4);
 
 
 
@@ -558,30 +558,22 @@ document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button3{ heig
 
 
 function n4_1(){
-let basket = [
-  
+let busket = [{name: 'banana', quant: 2, buy: true,},{name: 'strobery', quant: 10, buy: true,},{name: 'apple', quant: 5, buy: false,} ]
+let nameBoug = ''
 
 
+for ( let i = 0; i < busket.length; i++) {
+  nameBoug += " покупка: "+busket[i].name+" кол-во: "+busket[i].quant+" куплен? "+busket[i].buy
+ 
+}
+//@ts-ignore
+document.getElementById("boug").innerHTML = (` ${nameBoug } `)
 
-
-
-
-
-
-
-]
-
-
+//@ts-ignore
+document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button1{ height: 200px; width:138px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:flex;} </style>" );
 
 
 }
-
-
-
-
-
-
-
 
 function n4_2(){
 
@@ -594,3 +586,43 @@ function n4_3(){
 function n4_4(){
 
 }
+
+
+function Clock() {
+  
+  let timer:any
+
+  function render() {
+    let date = new Date();
+
+    let hours = (date.getHours())as any
+    if (hours < 10) hours = '0' + hours
+
+    let mins = (date.getMinutes())as any
+    if (mins < 10) mins = '0' + mins
+
+    let secs = (date.getSeconds())as any
+    if (secs < 10) secs = '0' + secs
+
+    let template:any
+    let output = template
+      .replace('h', hours)
+      .replace('m', mins)
+      .replace('s', secs)
+
+    console.log(output)
+  }
+
+  this.stop = function() {
+    clearInterval(timer)
+  };
+
+  this.start = function() {
+    render()
+    timer = setInterval(render, 1000)
+  }
+
+}
+
+let clock = new Clock({template: 'h:m:s'})
+clock.start()
