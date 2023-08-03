@@ -558,19 +558,87 @@ document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button3{ heig
 
 
 function n4_1(){
-let busket = [{name: 'banana', quant: 2, buy: true,},{name: 'strobery', quant: 10, buy: true,},{name: 'apple', quant: 5, buy: false,} ]
+let busket = [{name: 'banana', quant: 2, buy: true,},{name: 'strobery', quant: 10, buy: true,},{name: 'apple', quant: 5, buy: false,},{name: 'pineapple', quant: 3, buy: false,}  ]
 let nameBoug = ''
 
 
-for ( let i = 0; i < busket.length; i++) {
-  nameBoug += " покупка: "+busket[i].name+" кол-во: "+busket[i].quant+" куплен? "+busket[i].buy
- 
+
+for(let i = 0; i <busket.length; i++){
+
+  if ( busket[i].buy == true ){
+    //@ts-ignore
+    document.getElementById("testDiv").innerHTML = nameBoug += (`<div id="testDiv${i}" class="testDiv">${busket[i].name}(${busket[i].quant})</div>`)
+  }
+  else{ 
+    //@ts-ignore
+    document.getElementById("testDiv").innerHTML = nameBoug += (`<div id="testDiv${i}" class="testDiv2">${busket[i].name}(${busket[i].quant})</div>`)
+  }
+
 }
-//@ts-ignore
-document.getElementById("boug").innerHTML = (` ${nameBoug } `)
+
 
 //@ts-ignore
-document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button1{ height: 200px; width:138px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:flex;} </style>" );
+document.getElementById("plus").innerHTML = ('<div id="plusChest" class="plus"> добавить</div>  <style> </style>')
+
+const plusName = document.querySelector("#plusChest");
+plusName?.addEventListener("click", plus);
+
+
+function plus(){
+  //@ts-ignore
+  document.getElementById("plusName").innerHTML = (` <div class="inpFlex"> <input placeholder="назв." type="text" id="Name" class="inpall"> <input  placeholder="кол-во" type="text" id="quant" class="inpall"> <input placeholder="buy?" type="text" id="buy" class="inpall"></div>`)
+
+let newProd =[]
+
+
+ let Prod = ''
+ let Quant = 0
+ let Buy = false
+
+
+  let inputProd = document.querySelector('#inp1')
+  //@ts-ignore
+  Prod = inputProd.value
+
+  let inputQuant = document.querySelector('#inp2')
+  //@ts-ignore
+  Quant  = inputQuant.value
+  
+  let inputBuy = document.querySelector('#inp3')
+  //@ts-ignore
+  Buy  = inputBuy.value
+
+  newProd.push({Prod, Quant, Buy})
+
+  
+}
+
+
+
+
+
+
+
+// let inputSec = document.querySelector('#inp1')
+//   //@ts-ignore
+//   time.sec = inputSec.value
+
+//   let inputMin = document.querySelector('#inp2')
+//   //@ts-ignore
+//   time.min = inputMin.value
+  
+//   let inputHour = document.querySelector('#inp3')
+//   //@ts-ignore
+//   time.hour = inputHour.value
+
+
+
+
+
+
+
+//@ts-ignore
+document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button1{ height: 200px; width:160px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:flex;} </>" );
 
 
 }
@@ -589,45 +657,45 @@ function n4_4(){
 
 
 
-class Clock {
-  timer:any
- constructor ({template}:any){
-  this.template = template
- }
+// class Clock {
+//   timer:any
+//  constructor ({template}:any){
+//   this.template = template
+//  }
   
-   render() {
-    let date = new Date();
+//    render() {
+//     let date = new Date();
 
-    let hours = (date.getHours())as any
-    if (hours < 10) hours = '0' + hours
+//     let hours = (date.getHours())as any
+//     if (hours < 10) hours = '0' + hours
 
-    let mins = (date.getMinutes())as any
-    if (mins < 10) mins = '0' + mins
+//     let mins = (date.getMinutes())as any
+//     if (mins < 10) mins = '0' + mins
 
-    let secs = (date.getSeconds())as any
-    if (secs < 10) secs = '0' + secs
+//     let secs = (date.getSeconds())as any
+//     if (secs < 10) secs = '0' + secs
 
-    let template:any
-    let output = this.template
-      .replace('h', hours)
-      .replace('m', mins)
-      .replace('s', secs)
+//     let template:any
+//     let output = this.template
+//       .replace('h', hours)
+//       .replace('m', mins)
+//       .replace('s', secs)
 
-    console.log(output)
-  }
+//     console.log(output)
+//   }
 
-  stop = function() {
-    clearInterval(this.timer)
-  }
+//   stop = function() {
+//     clearInterval(this.timer)
+//   }
 
-  start = function() {
-    this.render()
-    timer = setInterval(()=>this.render, 1000)
-  }
-
-
+//   start = function() {
+//     this.render()
+//     timer = setInterval(()=>this.render, 1000)
+//   }
 
 
-}
-let clock = new Clock({template: 'h:m:s'})
-clock.start()
+
+
+// }
+// let clock = new Clock({template: 'h:m:s'})
+// clock.start()
