@@ -80,10 +80,6 @@ DZ3_2_3?.addEventListener("click", n4_3);
 const DZ3_2_4 = document.querySelector("#btn2_2_4");
 DZ3_2_4?.addEventListener("click", n4_4);
 
-
-
-
-
 const sad = document.querySelector("#inf");
 sad?.addEventListener("click", info);
 
@@ -475,194 +471,200 @@ function n3_1() {
 }
 
 function n3_2() {
+  let numDenom = {
+    numer: +(prompt("числитель") as string),
+    frect: "/",
+    denom: +(prompt("знаменатель") as string),
+  };
 
-let numDenom = {
-numer: +(prompt("числитель") as string),
-frect: '/',
-denom: +(prompt("знаменатель") as string),
+  //@ts-ignore
+  document.getElementById("sum").innerHTML = `сумма: ${
+    numDenom.numer * 2 + numDenom.frect + numDenom.denom
+  }`;
+
+  //@ts-ignore
+  document.getElementById("sub").innerHTML = `вычитание: ${
+    numDenom.numer - numDenom.numer + numDenom.frect + numDenom.denom
+  }`;
+
+  //@ts-ignore
+  document.getElementById("div").innerHTML = `умножение: ${
+    numDenom.numer * numDenom.numer +
+    numDenom.frect +
+    numDenom.denom * numDenom.denom
+  }`;
+
+  //@ts-ignore
+  document.getElementById("mult").innerHTML = `деление: ${
+    numDenom.numer / numDenom.numer +
+    numDenom.frect +
+    numDenom.denom / numDenom.denom
+  }`;
+
+  //@ts-ignore
+  document.getElementById("red").innerHTML = `сокращение: ${
+    numDenom.numer / numDenom.denom
+  }`;
+
+  //@ts-ignore
+  document.getElementById("size").innerHTML =
+    "  <style> .mane_button2{ height: 125px; text-align: start; display:flex;flex-direction: column;align-items: center;justify-content: flex-start; } </style>";
 }
-
-//@ts-ignore
-document.getElementById("sum").innerHTML = (`сумма: ${numDenom.numer*2 + numDenom.frect + numDenom.denom}`)
-
-//@ts-ignore
-document.getElementById("sub").innerHTML = (`вычитание: ${numDenom.numer - numDenom.numer +numDenom.frect + numDenom.denom}`)
-
-//@ts-ignore
-document.getElementById("div").innerHTML = (`умножение: ${numDenom.numer*numDenom.numer + numDenom.frect + numDenom.denom*numDenom.denom}`)
-
-//@ts-ignore
-document.getElementById("mult").innerHTML = (`деление: ${numDenom.numer/numDenom.numer + numDenom.frect + numDenom.denom/numDenom.denom}`)
-
-//@ts-ignore
-document.getElementById("red").innerHTML = (`сокращение: ${numDenom.numer/numDenom.denom}`)
-
-//@ts-ignore
-document.getElementById("size").innerHTML = ( "  <style> .mane_button2{ height: 125px; text-align: start; display:flex;flex-direction: column;align-items: center;justify-content: flex-start; } </style>" );
-}
-
-
-
-
-
-
-
 
 function n3_3() {
-
   let time = {
     hour: 15,
     min: 41,
-    sec: 23
-  }
-  
-  let inputSec = document.querySelector('#inp1')
-  //@ts-ignore
-  time.sec = inputSec.value
+    sec: 23,
+  };
 
-  let inputMin = document.querySelector('#inp2')
+  let inputSec = document.querySelector("#inp1");
   //@ts-ignore
-  time.min = inputMin.value
-  
-  let inputHour = document.querySelector('#inp3')
+  time.sec = inputSec.value;
+
+  let inputMin = document.querySelector("#inp2");
   //@ts-ignore
-  time.hour = inputHour.value
-  
-  
-  
-  
-while (time.sec > 60){
-time.sec -= 60
-time.min++
+  time.min = inputMin.value;
+
+  let inputHour = document.querySelector("#inp3");
+  //@ts-ignore
+  time.hour = inputHour.value;
+
+  while (time.sec > 60) {
+    time.sec -= 60;
+    time.min++;
+  }
+
+  while (time.min > 60) {
+    time.min -= 60;
+    time.hour++;
+  }
+
+  while (time.hour > 24) {
+    time.hour -= 24;
+  }
+
+  //@ts-ignore
+  document.getElementById(
+    "demo"
+  ).innerHTML = `${time.hour}:${time.min}:${time.sec}`;
+
+  //@ts-ignore
+  document.getElementById("sizeTime").innerHTML =
+    "  <style> .mane_button3{ height: 100px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:flex;} </style>";
 }
 
-  while(time.min > 60){
-    time.min -= 60
-    time.hour++
-  }
-  
-  
-    while(time.hour > 24){
-    time.hour -= 24
-  }
-  
-  //@ts-ignore
-  document.getElementById("demo").innerHTML = (`${time.hour}:${time.min}:${time.sec}`);
-  
-  
+function n4_1() {
+  DZ3_2_1?.removeEventListener("click", n4_1);
+  let busket = [
+    { name: "banana", quant: 2, buy: true },
+    { name: "strobery", quant: 10, buy: true },
+    { name: "apple", quant: 5, buy: false },
+    { name: "pineapple", quant: 3, buy: false },
+  ] as any;
 
-
-//@ts-ignore
-document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button3{ height: 100px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:flex;} </style>" );
-}
-
-
-function n4_1(){
-let busket = [{name: 'banana', quant: 2, buy: true,},{name: 'strobery', quant: 10, buy: true,},{name: 'apple', quant: 5, buy: false,},{name: 'pineapple', quant: 3, buy: false,}  ]
-let nameBoug = ''
-
-
-
-for(let i = 0; i <busket.length; i++){
-
-  if ( busket[i].buy == true ){
+  function renderBusket() {
     //@ts-ignore
-    document.getElementById("testDiv").innerHTML = nameBoug += (`<div id="testDiv${i}" class="testDiv">${busket[i].name}(${busket[i].quant})</div>`)
+    document.getElementById("testDiv").innerHTML = "";
+    for (let i = 0; i < busket.length; i++) {
+      if (busket[i].buy) {
+        //@ts-ignore
+        document.getElementById(
+          "testDiv"
+        ).innerHTML += `<div id="testDiv${i}" class="testDiv">${busket[i].name}(${busket[i].quant})</div>`;
+      }
+    }
+    for (let i = 0; i < busket.length; i++) {
+      if (!busket[i].buy) {
+        //@ts-ignore
+        document.getElementById(
+          "testDiv"
+        ).innerHTML += `<div id="testDiv${i}" class="testDiv2">${busket[i].name}(${busket[i].quant})</div>`;
+      }
+    }
   }
-  else{ 
+
+  renderBusket();
+
+  //@ts-ignore
+  document.getElementById(
+    "plusName"
+  ).innerHTML = ` <div class="inpFlex"> <input placeholder="назв." type="text" id="name" class="inpall"> <input  placeholder="кол-во" type="text" id="quant" class="inpall"></div>`;
+  //@ts-ignore
+  document.getElementById("plus").innerHTML =
+    '<div id="plusChest" class="plus"> добавить</div>  <style> </style>';
+
+  const plusName = document.querySelector("#plusChest");
+  plusName?.addEventListener("click", plus);
+
+//? использует plus c помощью Enter
+
+  const inputProd = document.querySelector("#name");
+  const inputQuant = document.querySelector("#quant");
+inputQuant?.addEventListener('keypress', (e)=>{
+  // @ts-ignore
+  if (e.keyCode==13) {
+    plus()
+  }
+})
+
+  function plus() {
+    let name = "";
+    let quant = 0;
+    let buy = false;
+    
     //@ts-ignore
-    document.getElementById("testDiv").innerHTML = nameBoug += (`<div id="testDiv${i}" class="testDiv2">${busket[i].name}(${busket[i].quant})</div>`)
+    name = inputProd.value;
+    
+    //@ts-ignore
+    quant = +inputQuant.value;
+    
+    const findEl = busket.find(((el:any)=>el.name==name))
+    
+    if (findEl) {
+      findEl.quant += +quant
+    }
+    else{
+      busket.push({ name, quant, buy });
+    }
+    //@ts-ignore
+    inputProd.value = ''
+    //@ts-ignore
+    inputQuant.value = ''
+    renderBusket();
   }
 
-}
 
 
-//@ts-ignore
-document.getElementById("plus").innerHTML = ('<div id="plusChest" class="plus"> добавить</div>  <style> </style>')
+  // let inputSec = document.querySelector('#inp1')
+  //   //@ts-ignore
+  //   time.sec = inputSec.value
 
-const plusName = document.querySelector("#plusChest");
-plusName?.addEventListener("click", plus);
+  //   let inputMin = document.querySelector('#inp2')
+  //   //@ts-ignore
+  //   time.min = inputMin.value
 
+  //   let inputHour = document.querySelector('#inp3')
+  //   //@ts-ignore
+  //   time.hour = inputHour.value
 
-function plus(){
   //@ts-ignore
-  document.getElementById("plusName").innerHTML = (` <div class="inpFlex"> <input placeholder="назв." type="text" id="Name" class="inpall"> <input  placeholder="кол-во" type="text" id="quant" class="inpall"> <input placeholder="buy?" type="text" id="buy" class="inpall"></div>`)
-
-let newProd =[]
-
-
- let Prod = ''
- let Quant = 0
- let Buy = false
-
-
-  let inputProd = document.querySelector('#inp1')
-  //@ts-ignore
-  Prod = inputProd.value
-
-  let inputQuant = document.querySelector('#inp2')
-  //@ts-ignore
-  Quant  = inputQuant.value
-  
-  let inputBuy = document.querySelector('#inp3')
-  //@ts-ignore
-  Buy  = inputBuy.value
-
-  newProd.push({Prod, Quant, Buy})
-
-  
+  document.getElementById("sizeTime").innerHTML =
+    "  <style> .mane_button1{ height: 200px; width:160px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:flex;} <style/>";
 }
 
+function n4_2() {}
 
+function n4_3() {}
 
-
-
-
-
-// let inputSec = document.querySelector('#inp1')
-//   //@ts-ignore
-//   time.sec = inputSec.value
-
-//   let inputMin = document.querySelector('#inp2')
-//   //@ts-ignore
-//   time.min = inputMin.value
-  
-//   let inputHour = document.querySelector('#inp3')
-//   //@ts-ignore
-//   time.hour = inputHour.value
-
-
-
-
-
-
-
-//@ts-ignore
-document.getElementById("sizeTime").innerHTML = ( "  <style> .mane_button1{ height: 200px; width:160px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:flex;} </>" );
-
-
-}
-
-function n4_2(){
-
-}
-
-function n4_3(){
-
-}
-
-function n4_4(){
-
-}
-
-
+function n4_4() {}
 
 // class Clock {
 //   timer:any
 //  constructor ({template}:any){
 //   this.template = template
 //  }
-  
+
 //    render() {
 //     let date = new Date();
 
@@ -692,9 +694,6 @@ function n4_4(){
 //     this.render()
 //     timer = setInterval(()=>this.render, 1000)
 //   }
-
-
-
 
 // }
 // let clock = new Clock({template: 'h:m:s'})
