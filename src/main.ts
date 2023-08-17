@@ -571,7 +571,7 @@ function n4_1() {
         //@ts-ignore
         document.getElementById(
           "testDiv"
-        ).innerHTML += `<div id="testDiv${i}" class="testDiv">${busket[i].name}(${busket[i].quant})</div>`;
+        ).innerHTML += `<div id="testDiv${i}" class="testDiv"> <label class="container"><input id="cheked" checked="checked" type="checkbox"><div class="checkmark"></div></label>${busket[i].name}(${busket[i].quant})</div>`;
       }
     }
     for (let i = 0; i < busket.length; i++) {
@@ -579,7 +579,7 @@ function n4_1() {
         //@ts-ignore
         document.getElementById(
           "testDiv"
-        ).innerHTML += `<div id="testDiv${i}" class="testDiv2">${busket[i].name}(${busket[i].quant})</div>`;
+        ).innerHTML += `<div id="testDiv${i}" class="testDiv2"> <label class="container"><input id="unCheked" type="checkbox"><div class="checkmark"></div></label>${busket[i].name}(${busket[i].quant})</div>`;
       }
     }
   }
@@ -597,56 +597,57 @@ function n4_1() {
   const plusName = document.querySelector("#plusChest");
   plusName?.addEventListener("click", plus);
 
-//? использует plus c помощью Enter
+  //? использует plus c помощью Enter
 
   const inputProd = document.querySelector("#name");
   const inputQuant = document.querySelector("#quant");
-inputQuant?.addEventListener('keypress', (e)=>{
-  // @ts-ignore
-  if (e.keyCode==13) {
-    plus()
-  }
-})
+  inputQuant?.addEventListener("keypress", (e) => {
+    // @ts-ignore
+    if (e.keyCode == 13) {
+      plus();
+    }
+  });
 
   function plus() {
     let name = "";
     let quant = 0;
     let buy = false;
-    
+
     //@ts-ignore
     name = inputProd.value;
-    
+
     //@ts-ignore
     quant = +inputQuant.value;
-    
-    const findEl = busket.find(((el:any)=>el.name==name))
-    
+
+    const findEl = busket.find((el: any) => el.name == name);
+
     if (findEl) {
-      findEl.quant += +quant
-    }
-    else{
+      findEl.quant += +quant;
+    } else {
       busket.push({ name, quant, buy });
     }
     //@ts-ignore
-    inputProd.value = ''
+    inputProd.value = "";
     //@ts-ignore
-    inputQuant.value = ''
+    inputQuant.value = "";
     renderBusket();
   }
 
+  const TtoF = document.querySelector("#cheked");
+  TtoF?.addEventListener("click", ternF);
 
+  const FtoT = document.querySelector("#unCheked");
+  FtoT?.addEventListener("click", ternT);
 
-  // let inputSec = document.querySelector('#inp1')
-  //   //@ts-ignore
-  //   time.sec = inputSec.value
+  function ternF() {
+  
+  }
 
-  //   let inputMin = document.querySelector('#inp2')
-  //   //@ts-ignore
-  //   time.min = inputMin.value
+  function ternT() {
+    
+    
+  }
 
-  //   let inputHour = document.querySelector('#inp3')
-  //   //@ts-ignore
-  //   time.hour = inputHour.value
 
   //@ts-ignore
   document.getElementById("sizeTime").innerHTML =
