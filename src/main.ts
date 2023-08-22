@@ -571,7 +571,7 @@ function n4_1() {
         //@ts-ignore
         document.getElementById(
           "testDiv"
-        ).innerHTML += `<div id="testDiv${i}" class="testDiv"> <label class="container"><input id="cheked" checked="checked" type="checkbox"><div class="checkmark"></div></label>${busket[i].name}(${busket[i].quant})</div>`;
+        ).innerHTML += `<div id="testDiv${i}" class="testDiv"> <label class="container"><input checked="checked" type="checkbox"><div class="checkmark"></div></label>${busket[i].name}(${busket[i].quant})</div>`;
       }
     }
     for (let i = 0; i < busket.length; i++) {
@@ -579,8 +579,12 @@ function n4_1() {
         //@ts-ignore
         document.getElementById(
           "testDiv"
-        ).innerHTML += `<div id="testDiv${i}" class="testDiv2"> <label class="container"><input id="unCheked" type="checkbox"><div class="checkmark"></div></label>${busket[i].name}(${busket[i].quant})</div>`;
+        ).innerHTML += `<div id="testDiv${i}" class="testDiv2"> <label class="container"><input type="checkbox"><div class="checkmark"></div></label>${busket[i].name}(${busket[i].quant})</div>`;
       }
+    }
+    const chbx = document.querySelectorAll("#btn2_2_1 [type=checkbox]");
+    for (let el of chbx) {
+      el?.addEventListener("click", () => ternF(chbx));
     }
   }
 
@@ -633,69 +637,29 @@ function n4_1() {
     renderBusket();
   }
 
-  const TtoF = document.querySelector("#cheked");
-  TtoF?.addEventListener("click", ternF);
-
-  const FtoT = document.querySelector("#unCheked");
-  FtoT?.addEventListener("click", ternT);
-
-  function ternF() {
-  
+  function ternF(chbx: any) {
+    for (let i = 0; i < busket.length; i++) {
+      // @ts-ignore
+      busket[i].buy = chbx[i].checked;
+    }
+    renderBusket();
   }
-
-  function ternT() {
-    
-    
-  }
-
 
   //@ts-ignore
   document.getElementById("sizeTime").innerHTML =
     "  <style> .mane_button1{ height: 200px; width:160px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:flex;} <style/>";
 }
 
-function n4_2() {}
+function n4_2() {
+  // let check = [["banana",2, 10],["strobery", 10, 5]]
+  // let i = 0
+  // do{
+  //   document.getElementById("check").innerHTML =check[i]
+  //   i++
+  // }
+  // while(i > check.length)
+}
 
 function n4_3() {}
 
 function n4_4() {}
-
-// class Clock {
-//   timer:any
-//  constructor ({template}:any){
-//   this.template = template
-//  }
-
-//    render() {
-//     let date = new Date();
-
-//     let hours = (date.getHours())as any
-//     if (hours < 10) hours = '0' + hours
-
-//     let mins = (date.getMinutes())as any
-//     if (mins < 10) mins = '0' + mins
-
-//     let secs = (date.getSeconds())as any
-//     if (secs < 10) secs = '0' + secs
-
-//     let template:any
-//     let output = this.template
-//       .replace('h', hours)
-//       .replace('m', mins)
-//       .replace('s', secs)
-
-//     console.log(output)
-//   }
-
-//   stop = function() {
-//     clearInterval(this.timer)
-//   }
-
-//   start = function() {
-//     this.render()
-//     timer = setInterval(()=>this.render, 1000)
-//   }
-
-// }
-// let clock = new Clock({template: 'h:m:s'})
-// clock.start()
