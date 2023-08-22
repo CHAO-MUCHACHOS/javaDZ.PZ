@@ -651,13 +651,31 @@ function n4_1() {
 }
 
 function n4_2() {
-  // let check = [["banana",2, 10],["strobery", 10, 5]]
-  // let i = 0
-  // do{
-  //   document.getElementById("check").innerHTML =check[i]
-  //   i++
-  // }
-  // while(i > check.length)
+  let check = [
+    { name: "banana", quant: 2, price: 3 },
+    { name: "strobery", quant: 10, price: 5 },
+    { name: "apple", quant: 5, price: 4 },
+    { name: "pineapple", quant: 3, price: 8 },
+  ] as any;
+
+  renderCheck();
+
+  function renderCheck() {
+    //@ts-ignore
+    document.getElementById("check").innerHTML = "";
+
+    for (let i = 0; i < check.length; i++) {
+      //@ts-ignore
+      document.getElementById(
+        "check"
+      ).innerHTML += `<div class="checkFlex" >${check[i].name}</div> (${check[i].quant})      [${check[i].price}]`;
+    }
+  }
+
+  document.getElementById("checkCSS").innerHTML =(`<style>.checkFlex{ width:100px; height:100px; }</style>`)
+
+
+
 }
 
 function n4_3() {}

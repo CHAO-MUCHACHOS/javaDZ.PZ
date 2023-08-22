@@ -356,7 +356,10 @@ color: green;
 .inpFlex{
   display: flex;
 }
-
+.checkFlex{
+  display: flex;
+  
+}
 
 
 /* html, body{
