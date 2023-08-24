@@ -647,7 +647,7 @@ function n4_1() {
 
   //@ts-ignore
   document.getElementById("sizeTime").innerHTML =
-    "  <style> .mane_button1{ height: 200px; width:160px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; } .inpSec, .inpMin, .inpHour{ display:flex;} <style/>";
+    "  <style> .mane_button1{ height: 200px; width:160px; display:flex;flex-direction: column; justify-content: space-evenly; }<style/>";
 }
 
 function n4_2() {
@@ -668,14 +668,33 @@ function n4_2() {
       //@ts-ignore
       document.getElementById(
         "check"
-      ).innerHTML += `<div class="checkFlex" >${check[i].name}</div> (${check[i].quant})      [${check[i].price}]`;
+      ).innerHTML += `<div class='checkList' >${check[i].name}(${check[i].quant})[${check[i].price}$]</div>`;
     }
   }
 
-  document.getElementById("checkCSS").innerHTML =(`<style>.checkFlex{ width:100px; height:100px; }</style>`)
+
+  let firstQuant = check[0].quant
+  let firstPrise = check[0].price
 
 
 
+
+  let allPrise = firstPrise * firstQuant 
+  
+console.log(allPrise);
+
+
+
+
+
+
+
+
+  
+  //@ts-ignore
+  document.getElementById(
+    "checkCSS"
+  ).innerHTML = `<style>.mane_button2{ height: 200px; width:160px; display:flex; flex-direction: column; justify-content: space-evenly; }</style>`;
 }
 
 function n4_3() {}
