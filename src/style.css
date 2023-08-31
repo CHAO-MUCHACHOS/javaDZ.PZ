@@ -30,6 +30,7 @@ summary {
 
 .all-dz {
   display: flex;
+  flex-wrap: wrap;
 }
 
 details {
