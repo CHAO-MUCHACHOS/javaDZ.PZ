@@ -697,6 +697,4 @@ console.log(allPrise);
   ).innerHTML = `<style>.mane_button2{ height: 200px; width:160px; display:flex; flex-direction: column; justify-content: space-evenly; }</style>`;
 }
 
-function n4_3() {}
 
-function n4_4() {}
