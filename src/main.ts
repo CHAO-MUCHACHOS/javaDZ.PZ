@@ -723,17 +723,7 @@ console.log(allPrise);
 
 
 function n5_1() {
-  let str = prompt("значения") as any
-  let arrStr = [] as any
-  let x
-  let i = 0
-do{
-x = str[i]
-arrStr.push(x)
-i++
-}while(str.length>i)
 
- console.log(arrStr);
- 
+
    
   }
