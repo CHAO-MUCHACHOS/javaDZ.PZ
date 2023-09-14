@@ -74,6 +74,41 @@ DZ3_2_1?.addEventListener("click", n4_1);
 const DZ3_2_2 = document.querySelector("#btn2_2_2");
 DZ3_2_2?.addEventListener("click", n4_2);
 
+
+
+const DZ3_3_1 = document.querySelector("#btn2_3_1");
+DZ3_3_1?.addEventListener("click", n5_1);
+
+// const DZ3_3_2 = document.querySelector("#btn2_3_2");
+// DZ3_3_2?.addEventListener("click", n5_2);
+
+// const DZ3_3_3 = document.querySelector("#btn2_3_3");
+// DZ3_3_3?.addEventListener("click", n5_3);
+
+// const DZ3_3_4 = document.querySelector("#btn2_3_4");
+// DZ3_3_4?.addEventListener("click", n5_4);
+
+// const DZ3_3_5 = document.querySelector("#btn2_3_5");
+// DZ3_3_5?.addEventListener("click", n5_5);
+
+// const DZ3_3_6 = document.querySelector("#btn2_3_6");
+// DZ3_3_6?.addEventListener("click", n5_6);
+
+// const DZ3_3_7 = document.querySelector("#btn2_3_7");
+// DZ3_3_7?.addEventListener("click", n5_7);
+
+// const DZ3_3_8 = document.querySelector("#btn2_3_8");
+// DZ3_3_8?.addEventListener("click", n5_8);
+
+// const DZ3_3_9 = document.querySelector("#btn2_3_9");
+// DZ3_3_9?.addEventListener("click", n5_9);
+
+// const DZ3_3_10 = document.querySelector("#btn2_3_10");
+// DZ3_3_10?.addEventListener("click", n5_10);
+
+
+
+
 const sad = document.querySelector("#inf");
 sad?.addEventListener("click", info);
 
@@ -679,11 +714,6 @@ console.log(allPrise);
 
 
 
-
-
-
-
-
   
   //@ts-ignore
   document.getElementById(
@@ -692,4 +722,18 @@ console.log(allPrise);
 }
 
 
+function n5_1() {
+  let str = prompt("значения") as any
+  let arrStr = [] as any
+  let x
+  let i = 0
+do{
+x = str[i]
+arrStr.push(x)
+i++
+}while(str.length>i)
 
+ console.log(arrStr);
+ 
+   
+  }
