@@ -74,12 +74,6 @@ DZ3_2_1?.addEventListener("click", n4_1);
 const DZ3_2_2 = document.querySelector("#btn2_2_2");
 DZ3_2_2?.addEventListener("click", n4_2);
 
-const DZ3_2_3 = document.querySelector("#btn2_2_3");
-DZ3_2_3?.addEventListener("click", n4_3);
-
-const DZ3_2_4 = document.querySelector("#btn2_2_4");
-DZ3_2_4?.addEventListener("click", n4_4);
-
 const sad = document.querySelector("#inf");
 sad?.addEventListener("click", info);
 
