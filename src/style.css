@@ -178,7 +178,6 @@ footer:active {
 
 
 .bn {
-  top: 60vh;
   left: 17vh;
   padding: 20px 40px;
   border: none;
@@ -271,7 +270,7 @@ footer:active {
 
 .btn {
   position: relative;
-  top: 65vh;
+  top: 100vh;
   left: 3vh;
   place-items: center;
   background: #e3edf7;
@@ -373,4 +372,10 @@ width: 50%;
 height: 400px;
   color: white;
   background-color: #444;
+}
+.test{
+  display: none;
+  width: 100px;
+  height: 100px;
+  background-color: gainsboro;
 }
