@@ -728,6 +728,6 @@ function n5_1() {
    
   
 }
-let s = 's'
+let s = '1'
 let x = +s % 1 == 0
 console.log(x);
